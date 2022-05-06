@@ -15,7 +15,7 @@ class CallbackTest {
         $("[data-test-id=phone] input").setValue("+79270000000");
         $("[data-test-id=agreement]").click();
         $(".button").click();
-        $(".Success_successBlock__2L3Cw").shouldHave(text(" Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
+        $(".Success_successBlock__2L3Cw").shouldHave(text("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
     }
 
     @Test
@@ -50,7 +50,7 @@ class CallbackTest {
     void shouldGetErrorMessageIfPhoneEmpty() {
         open("http://localhost:9999");
         $("[data-test-id=name] input").setValue("Иванов-Петров Иван");
-        $("[data-test-id=phone] input").setValue("");
+        $("[data-test-id=phone] input").setValue("89161927856");
         $("[data-test-id=agreement]").click();
         $(".button").click();
         $(".input_type_tel .input__sub").shouldHave(text("Поле обязательно для заполнения"));
